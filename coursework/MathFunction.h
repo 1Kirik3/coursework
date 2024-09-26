@@ -1,62 +1,141 @@
-#pragma once
-#include <vector>
-#define PI 3.141592653589793238463
+//
+// MathFunction.h
+//
+
+#pragma once		// include this file once
+
+#include <vector>	// vector of dots/points
+
+
+/// <summary>
+/// class defines type of object that will be
+/// drawed in CMyGraph element
+/// </summary>
 class MathFunction
 {
 protected:
+	/// <summary>
+	/// deafult dot calculation function
+	/// is used in default points calculation function
+	/// </summary>
+	/// <param name="x">argument</param>
+	/// <returns>function value in the x</returns>
 	virtual  double f(double x) = 0;
-	double from, to;
-	double step=1;
+	// pure virtual function (must be defined in subclasses)
 
+	// definition scope
+	double from, to;
+
+	// calculating step (in math coords)
+	double step = 1;
+
+
+	// indicates if axis is log
 	bool is_log;
+
+	// calculating scope
 	struct
 	{
 		double x_from, x_to;
 		double y_from, y_to;
 	}scale;
+
+	// indicates if vector is ready
 	bool is_calculated = false;
+
+	// drawing area
 	CRect rect;
-public:
+
+	// vector of the points
 	std::vector<POINT> points;
+public:
+	// color on the graph
 	COLORREF color;
 public:
-	void set_scale(double x_from, double x_to, double y_from, double y_to);
-	void set_definition_scope(double from, double to);
-	void set_step(double s);
-	void set_rect(CRect r);
-	void set_log(bool b);
-	void set_color(COLORREF rgb);
-	void set_not_calculated();
+	// setters
+	bool setScale(double x_from, double x_to, double y_from, double y_to);
+	bool setDefinitionScope(double from, double to);
+	bool setStep(double s);
+	bool setRect(CRect r);
+	bool setLog(bool b);
+	void setColor(COLORREF rgb);
+	void setNotCalculated();
+	// getters
+	bool getCalculated();
 	virtual const std::vector<POINT>& get_points();
 protected:
+	/// <summary>
+	/// calculates vector of the points
+	/// </summary>
 	virtual void calculate();
-	POINT to_the_new_coords_system(double x, double y) const;
+
+	/// <summary>
+	/// math coords to the element coords conversion
+	/// </summary>
+	/// <param name="x">x coord</param>
+	/// <param name="y">y coord</param>
+	/// <returns>POINT in element coords</returns>
+	POINT coordsToDot(double x, double y) const;
 };
 
+/// <summary>
+/// Subclass that defines signal function like x(t)=a*sin(x*(m*x+f))
+/// </summary>
 class SignalFunction : public MathFunction
 {
 protected:
+	// parameters of the signal function
 	double a, m, f_;
-public:
-	std::vector<double> data;
+	// samples amount
+	size_t samples_amount = 100;
+	static const double samples_step;	
+	// vector of the dots for DFT
+	std::vector<double> samples;
 protected:
-	virtual double f(double x);
+	/// <summary>
+	/// Calculates x(t)=a*sin(x*(m*x+f))
+	/// </summary>
+	/// <param name="t"></param>
+	/// <returns>x(t)</returns>
+	virtual double f(double t) override;
 public:
-	void set_a(double a);
-	void set_m(double m);
-	void set_f(double f);
-	const std::vector<double>& get_data();
-	virtual void calculate();
+	// setters
+	bool set_a(double a);
+	bool set_m(double m);
+	bool set_f(double f);
+	bool set_samples_amount(size_t N);
+	// dots vector getter
+	const std::vector<double>& getData();
+
+	// overriding of the parent calculation function
+	virtual void calculate() override;
 };
+
+/// <summary>
+/// Subclass that defines DFT for signal function
+/// </summary>
 class DFTFunction : public SignalFunction
 {
 public:
-	DFTFunction(SignalFunction* s);
+	/// <summary>
+	/// Constructs the class
+	/// </summary>
+	/// <param name="s">a pinter to the SignalFunction - signal function</param>
+	DFTFunction(SignalFunction* s = nullptr);
 protected:
-	double f(double x);
+	/// <summary>
+	/// calculates one sample
+	/// </summary>
+	/// <param name="x">number of the sample (is double cos of overriding)</param>
+	/// <returns>|Xk|</returns>
+	double f(int m);
+
+	// a pointer to a signal function
 	SignalFunction* signal;
 public:
-	void calculate();
+	// calculation overriding
+	void calculate() override;
+	// signal function setter
 	void set_signal(SignalFunction* s);
 
 };

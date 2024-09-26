@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="CAboutDlg">
-    <Position X="6.5" Y="4.25" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Enum Name="CAboutDlg::__unnamed_enum_0002_1">
+      <Enum Name="CAboutDlg::__unnamed_enum_0007_1">
         <TypeIdentifier>
           <NewMemberFileName>courseworkDlg.cpp</NewMemberFileName>
         </TypeIdentifier>
@@ -15,108 +18,97 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Enum Name="Calculator::__unnamed_enum_0371_1" Collapsed="true">
+      <Enum Name="Calculator::__unnamed_enum_0002_1">
         <TypeIdentifier>
           <NewMemberFileName>Calculator.h</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>ACBAAAEAAAAAAAAAABACAEAAAAAAAAgCAgAAAAQAAAA=</HashCode>
+      <HashCode>FCJAgAEEiAAAJQEoAJACAEICABAABAhCAgAEAAwAgkA=</HashCode>
       <FileName>Calculator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CMyGraph">
-    <Position X="10" Y="0.5" Width="1.5" />
+    <Position X="13.75" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Struct Name="CMyGraph::__unnamed_struct_028b_1" Collapsed="true">
+      <Struct Name="CMyGraph::__unnamed_struct_0004_1">
+        <TypeIdentifier>
+          <NewMemberFileName>CMyGraph.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="CMyGraph::__unnamed_struct_0004_2">
         <TypeIdentifier>
           <NewMemberFileName>CMyGraph.h</NewMemberFileName>
         </TypeIdentifier>
       </Struct>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AACACAAAAAAAAiABAgAAAAABAAAAAAACAAAGAIAAAAA=</HashCode>
+      <HashCode>AICACAABCECAQiBRAwoBAIgBDAUoACAOAhCGIIAhAAA=</HashCode>
       <FileName>CMyGraph.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MathFunction">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Position X="0.75" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Struct Name="MathFunction::__unnamed_struct_0372_1" Collapsed="true">
+      <Struct Name="MathFunction::__unnamed_struct_000b_1">
         <TypeIdentifier>
           <NewMemberFileName>MathFunction.h</NewMemberFileName>
         </TypeIdentifier>
       </Struct>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>ABAAAAKAAIABAAAgAAAAIAgCQAkoAACAAQAAAAAAACA=</HashCode>
+      <HashCode>AAAACAKACAAAAgABAAAAIAgCAAEoAACSAAAAAoAIACA=</HashCode>
       <FileName>MathFunction.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PureFunction">
-    <Position X="0.5" Y="0.5" Width="2" />
+  <Class Name="SignalFunction">
+    <Position X="0.75" Y="8.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PureFunction.h</FileName>
+      <HashCode>AAQQAAAAAAAAAAAAAAAEIAAAACgAAAQ6AgAAAAAAAAA=</HashCode>
+      <FileName>MathFunction.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SignalFunction">
-    <Position X="0.75" Y="2" Width="1.5" />
+  <Class Name="DFTFunction">
+    <Position X="0.75" Y="13" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAwAgAAABAAAAA=</HashCode>
-      <FileName>PureFunction.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIIgAAAAAAAAASAAAAAAAAAAA=</HashCode>
+      <FileName>MathFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CcourseworkApp">
-    <Position X="6.5" Y="2.75" Width="1.5" />
+    <Position X="11" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAA=</HashCode>
       <FileName>coursework.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CcourseworkDlg">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+    <Position X="4.5" Y="4" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Enum Name="CcourseworkDlg::__unnamed_enum_0005_1" Collapsed="true">
+      <Enum Name="CcourseworkDlg::__unnamed_enum_0008_1">
         <TypeIdentifier>
           <NewMemberFileName>courseworkDlg.h</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>EACIAAUAAAAAAAAAABAAAAAAAAAAIAQAIAAEAAAUAAA=</HashCode>
+      <HashCode>EAAAAAUAAAAAAAAAABAAAAAAAAAAIAQAIAAEAAAUAAA=</HashCode>
       <FileName>courseworkDlg.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DataErrorDlg">
-    <Position X="4.75" Y="4.25" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="DataErrorDlg::__unnamed_enum_0375_1" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>DataErrorDlg.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAEAAAABAAAAABAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
-      <FileName>DataErrorDlg.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MyTaskAboutDlg">
-    <Position X="6.5" Y="0.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="MyTaskAboutDlg::__unnamed_enum_036f_1" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>MyTaskAboutDlg.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAAEBAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MyTaskAboutDlg.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

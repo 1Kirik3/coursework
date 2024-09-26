@@ -1,5 +1,5 @@
-﻿
-// coursework.h: главный файл заголовка для приложения PROJECT_NAME
+﻿//
+// coursework.h
 //
 
 #pragma once
@@ -8,25 +8,33 @@
 #error "включить pch.h до включения этого файла в PCH"
 #endif
 
-#include "resource.h"		// основные символы
+#include "resource.h"		// including interface markup
 
 
-// CcourseworkApp:
-// Сведения о реализации этого класса: coursework.cpp
-//
-
+/// <summary>
+/// Class that defines the application - child of CWinApp
+/// </summary>
 class CcourseworkApp : public CWinApp
 {
 public:
+	/// <summary>
+	/// Constructor
+	/// </summary>
 	CcourseworkApp();
-
-	// Переопределение
 public:
+	/// <summary>
+	/// Initialization
+	/// </summary>
 	virtual BOOL InitInstance();
 
-	// Реализация
 
+	/// <summary>
+	/// message processing loop
+	/// </summary>
 	DECLARE_MESSAGE_MAP()
 };
-
+/// <summary>
+/// the single instance of the class,
+/// it represents the app
+/// </summary>
 extern CcourseworkApp theApp;
